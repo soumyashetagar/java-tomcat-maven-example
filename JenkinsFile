@@ -20,7 +20,7 @@ pipeline {
        stage('deploy'){
         steps{
             
-            sh 'scp DeployPipeline/target/java-tomcat-maven-example.war	 13.233.106.132:8090/'
+            curl -s --upload-file target/java-tomcat-maven-example.war	 "http://tomcat:phoenix@13.233.106.132:8090/manager/text/deploy?path=/html&update=true&tag=${BUILD_TAG}"
         
         }
        
