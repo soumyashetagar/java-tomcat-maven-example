@@ -20,7 +20,7 @@ pipeline {
        stage('deploy'){
         steps{
             
-           sh 'cp  /var/lib/jenkins/workspace/DeployPipeline/target/java-tomcat-maven-example.war	 /var/lib/tomcat9.0.26/'
+           sh 'cp  /var/lib/jenkins/workspace/DeployPipeline/target/java-tomcat-maven-example.war tomcat9.0.26/webapps'
         }
        
        }
