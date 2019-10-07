@@ -20,7 +20,7 @@ pipeline {
         
        stage('nexus'){
        steps{
-       nexusArtifactUploader artifacts: [[artifactId: 'java-tomcat-maven-example', classifier: '', file: '/var/lib/jenkins/workspace/DeployPipeline/target/java-tomcat-maven-example.wa', type: 'war']], credentialsId: '09078004-6814-49f4-9ad8-066e34c85e11', groupId: 'com.example', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '1.0-phoenix'
+       nexusArtifactUploader artifacts: [[artifactId: 'java-tomcat-maven-example', classifier: '', file: '/var/lib/jenkins/workspace/DeployPipeline/target/java-tomcat-maven-example.war', type: 'war']], credentialsId: '09078004-6814-49f4-9ad8-066e34c85e11', groupId: 'com.example', nexusUrl: '18.224.155.110:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'devopstraining', version: '1.0-phoenix'
        }
        
        }
